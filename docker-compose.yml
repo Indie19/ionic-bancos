@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: ionic
+    env_file: .env
+    command: bash -c "npm install --rebuild && /usr/local/bin/ionic serve --no-open"
+    volumes:
+      - .:/ionic-project
+    working_dir: /ionic-project/ionic-bancos
+    ports:
+      - 8100:8100
