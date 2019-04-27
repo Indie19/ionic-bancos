@@ -11,7 +11,7 @@ import { ListBanksPage } from '../pages/list-banks/list-banks';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
     ListBanksPage
   ],
   imports: [
@@ -21,7 +21,7 @@ import { ListBanksPage } from '../pages/list-banks/list-banks';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
     ListBanksPage
   ],
   providers: [

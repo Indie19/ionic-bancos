@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list-banks.html',
 })
 export class ListBanksPage {
-
+  edad: string = "5";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
