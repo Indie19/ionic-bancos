@@ -64,6 +64,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:/opt/tools
 # Install sdk elements
 #COPY tools /opt/tools
 RUN cp -R /opt/android-sdk-linux/tools/ /opt/tools
+RUN npm install -g typescript
 #
 #RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui --filter platform-tools,tools,build-tools-26.0.2,android-27,android-26,build-tools-25.0.0,android-25,extra-android-support,extra-android-m2repository,extra-google-m2repository"]
 #RUN unzip ${ANDROID_HOME}/temp/*.zip -d ${ANDROID_HOME}
