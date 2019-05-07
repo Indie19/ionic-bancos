@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ListBanksPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ListBanksProvider } from '../../providers/list-banks/list-banks';
 
 @IonicPage()
 @Component({
@@ -14,12 +8,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list-banks.html',
 })
 export class ListBanksPage {
-  edad: string = "5";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  banksArray: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public listBankProvider: ListBanksProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListBanksPage');
+      this.queryBanks()
   }
 
+  queryBanks(){
+      this.listBankProvider.list_banks().subscribe(
+          (data_resp) => {
+              console.log(data_resp)
+              this.banksArray = data_resp;
+          },
+          (error) => {console.log(error.error)}
+      );    
+  }
+ 
 }
