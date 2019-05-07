@@ -11,8 +11,10 @@
 </ion-header>
 
 <ion-content padding>
-        <h1>Edad:</h1>
-        <input [(ngModel)]="edad">
-        <p>{{edad}}</p>
-
+    <ion-grid>
+       <ion-row *ngFor="let bank of bankArray">
+           <ion-col>{{bank.date_created}}</ion-col>
+           <ion-col>{{bank.name}}</ion-col>
+       </ion-row>
+    </ion-grid>
 </ion-content>
