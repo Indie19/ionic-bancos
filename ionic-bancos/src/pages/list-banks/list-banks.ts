@@ -25,7 +25,7 @@ export class ListBanksPage {
               this.banksArray = data_resp;
           },
           (error) => {console.log(error.error)}
-      );    
+      );
   }
  
 }

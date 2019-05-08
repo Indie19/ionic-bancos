@@ -11,8 +11,12 @@
 </ion-header>
 
 <ion-content padding>
+  {{banksArray}}
+</ion-content>
+
+<ion-content padding>
     <ion-grid>
-       <ion-row *ngFor="let bank of bankArray">
+       <ion-row *ngFor="let bank of banksArray">
            <ion-col>{{bank.date_created}}</ion-col>
            <ion-col>{{bank.name}}</ion-col>
        </ion-row>

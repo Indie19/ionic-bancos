@@ -18,7 +18,8 @@ import { ListBanksProvider } from '../providers/list-banks/list-banks';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp), HttpClientModule
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
