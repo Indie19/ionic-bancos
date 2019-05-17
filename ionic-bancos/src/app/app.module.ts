@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListBanksPage } from '../pages/list-banks/list-banks';
+import { AddBanksPage } from '../pages/add-banks/add-banks';
 import { ListBanksProvider } from '../providers/list-banks/list-banks';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListBanksPage
+    ListBanksPage,
+    AddBanksPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { ListBanksProvider } from '../providers/list-banks/list-banks';
   entryComponents: [
     MyApp,
     HomePage,
-    ListBanksPage
+    ListBanksPage,
+    AddBanksPage
   ],
   providers: [
     StatusBar,
