@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AddBanksPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AddBankProvider } from '../../providers/add-bank/add-bank';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddBanksPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  bancoName: string = "";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public addBankProvider: AddBankProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddBanksPage');
+  addBank(){
+  this.addBankProvider.addBank(this.bancoName).subscribe(
+    (data_resp)=>{console.log(data_resp)},
+    (error)=>{console.log('error')},
+  )
   }
 
 }
