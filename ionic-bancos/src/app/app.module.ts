@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { ListBanksPage } from '../pages/list-banks/list-banks';
 import { AddBanksPage } from '../pages/add-banks/add-banks';
 import { ListBanksProvider } from '../providers/list-banks/list-banks';
+import { AddBankProvider } from '../providers/add-bank/add-bank';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListBanksProvider } from '../providers/list-banks/list-banks';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ListBanksProvider
+    ListBanksProvider,
+    AddBankProvider
   ]
 })
 export class AppModule {}
